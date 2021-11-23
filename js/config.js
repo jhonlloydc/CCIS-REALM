@@ -1,6 +1,8 @@
 // Set Page Titles
 var page1 = "Page one";
 var page2 = "Page two";
+var page3 = "Page three";
+var page4 = "Page four";
 
 // Data Tables
 
