@@ -6,7 +6,7 @@
     </head>
     <title>CCIS</title>
     <body>
-        <h1>Welcome To CCIS WEBSITE REALM</h1>
+        <h1 class="page-header"></h1>
         <div class="nav-bar">
             <button id="menu-1">Menu 1</button>
             <button id="menu-2">Menu 2</button>
@@ -18,7 +18,9 @@
         </div>
         
     </body>
+    <script src="js/config.js"></script>
     <script>
+        $('.page-header').html(pageheader);
         $('#menu-1').click(function(){
             alert('Menu 1 is clicked');
 
@@ -37,4 +39,5 @@
 
         });
     </script>
+    
 </html>

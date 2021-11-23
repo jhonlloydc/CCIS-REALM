@@ -1,3 +1,7 @@
+// Header TITLE PAGE
+
+var pageheader = "Welcome to CCIS Page";
+
 // Set Page Titles
 var page1 = "Page one";
 var page2 = "Page two";
