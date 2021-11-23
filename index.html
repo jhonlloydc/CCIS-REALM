@@ -9,15 +9,32 @@
         <h1>Welcome To CCIS WEBSITE REALM</h1>
         <div class="nav-bar">
             <button id="menu-1">Menu 1</button>
-            <button>Menu 1</button>
+            <button id="menu-2">Menu 1</button>
             <button>Menu 1</button>
             <button>Menu 1</button>
         </div>
-        <iframe id='content' src="page1.html" frameborder="0"></iframe>
+        <div class="main-content">
+            <iframe id='content' src="page1.html" frameborder="0"></iframe>
+        </div>
+        
     </body>
     <script>
         $('#menu-1').click(function(){
             alert('Menu 1 is clicked');
+
+            $('.main-content').html('');
+            $('.main-content').append(
+                <iframe id='content' src="page1.html" frameborder="0"></iframe>
+            );
+        });
+        $('#menu-2').click(function(){
+            alert('Menu 1 is clicked');
+
+            $('.main-content').html('');
+            $('.main-content').append(
+                <iframe id='content' src="page2.html" frameborder="0"></iframe>
+            );
+
         });
     </script>
 </html>
