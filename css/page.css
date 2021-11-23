@@ -5,10 +5,10 @@ body{
     padding: 0;
 }
 .container{
-    display: flex;
+  
 }
 .img-container{
-    display: flex;
+
     width: 700px;
     height: 400px;
     background-color: red;
@@ -33,10 +33,8 @@ body{
 .line-1{
     position: absolute;
     width: 204px;
-    height: 222px;
-    left: 241.5px;
-    top: 0px;
+    height: 233px;
+    left: 219.5px;
+    top: 50px
 
-    border: 5px solid #FFFFFF;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
