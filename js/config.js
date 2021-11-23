@@ -7,7 +7,8 @@ var page2 = "Page two";
 const data1 = {
 
     'first':[
-        {'points':100}
+        {'points':100},
+        {'team':'Bayson Team'}
     ],
     'second':[
         {'points':100}
