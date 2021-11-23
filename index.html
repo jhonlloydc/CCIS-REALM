@@ -8,12 +8,16 @@
     <body>
         <h1>Welcome To CCIS WEBSITE REALM</h1>
         <div class="nav-bar">
-            <button>Menu 1</button>
+            <button id="menu-1">Menu 1</button>
             <button>Menu 1</button>
             <button>Menu 1</button>
             <button>Menu 1</button>
         </div>
         <iframe id='content' src="page1.html" frameborder="0"></iframe>
     </body>
-
+    <script>
+        $('#menu-1').click(function(){
+            alert('Menu 1 is clicked');
+        });
+    </script>
 </html>
