@@ -2,8 +2,8 @@
     display: flex;
 }
 .img-container{
-    width: 300px;
-    height: 300px;
+    width: 700px;
+    height: 400px;
     background-color: red;
     display: flex;
     justify-content: center;
