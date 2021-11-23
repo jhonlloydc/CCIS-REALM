@@ -6,10 +6,18 @@
     </head>
     <title>CCIS</title>
     <body>
+        <div class="modal">
+            <div class="form">
+                <h1>Nickname</h1>
+                <input id='alias' class="des" type="text" name="">
+                <button id='set-alias' class="des" style="margin-top:10px;width: 88%;">DONE</button>
+            </div>
+        </div>
         <div class="side-box">
             <div class="action-box">
                 <div id='chat'>
                     <div class="online"></div>Chat</div>
+
                 <div class="close">X</div>
             </div>
             
@@ -41,6 +49,19 @@
     <script src="js/config.js"></script>
     <script>
 
+        $('#set-alias').click(function(){
+
+            var seta = $('#alias').val();
+            if(seta.trim() == ''){
+                alert('Enter Nickname');
+            }
+            else{
+                $('.modal').hide();
+            }
+            
+        });
+
+
         // ON LOAD
         let currentDate = new Date();
         let cDay = currentDate.getDate();
@@ -51,7 +72,7 @@
 
         $('#send').click(function(){
 
-            var name = "Anonymous";
+            var name = $('#alias').val();
             var message = $('.input-msg').val();
             
             $.post("https://pasuyo.store/ccis/ccis-add-message?name="+name+"&message="+message+"&date="+date+"");
@@ -70,7 +91,7 @@
 
                             "<div class='p-chat'>"+
                                 "<label class='sender'>"+value.name+"</label>"+
-                                "<p class='m-message'>"+value.message+"</p>"+
+                                "<div class='m-message'>"+value.message+"</div>"+
                             "</div>"
                         );
 

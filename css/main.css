@@ -7,6 +7,38 @@ P{
     margin: 0px;
     padding: 0px;
 }
+.modal{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#alias{
+    width: 80%;
+    padding: 10px;
+}
+.des{
+    width: 80%;
+    padding: 10px;
+}
+.form{
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    background-color: white;
+
+    justify-content: center;
+    align-items: center;
+}
 .page-header{
     width: 95%;
     margin-left: 5%;
@@ -25,8 +57,7 @@ P{
 .m-message{
     font-size: 11px;
     display: flex;
-    max-width: 100%;
-    flex-wrap: wrap;
+    width: 100%px;
 }
 .main-content{
     display: flex;
