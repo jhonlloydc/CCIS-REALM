@@ -74,8 +74,8 @@ html {
   .container {
     display: flex;
     width: 100%;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
 
     position: absolute;
     bottom: 0;
