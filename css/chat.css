@@ -1,0 +1,149 @@
+html {
+    scroll-behavior: smooth;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    padding: 2px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+  }
+  
+  body {
+    font-family: Arial;
+  }
+  h3,
+  p {
+    margin: 0px;
+    padding: 0px;
+  }
+  p {
+    font-size: 10px;
+  }
+  h3 {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+  .header-chat {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    heigth: 30px;
+  }
+  #show-chats {
+    width: 90%;
+    cursor: pointer;
+  }
+  #hide-chats {
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+  }
+  .icon {
+    width: 50px;
+    heigth: 50px;
+    background-color: green;
+    border-radius: 50px;
+    color: white;
+    padding-left: 7px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+  .chat-box {
+    width: 100%;
+    min-height: 300px;
+    max-height: 100%;
+    padding-right: 10px;
+    display: none;
+    align-items: flex-end;
+    /*   justify-content:flex-start; */
+    flex-direction: column;
+    overflow-y: auto;
+    margin-top: 10px;
+  }
+  .container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .message-container {
+    display: flex;
+    flex-direction: column;
+  
+    width: 350px;
+    height: 20px;
+    background-color: grey;
+    padding: 20px;
+    border-radius: 10px 10px 0px 0px;
+    transition: 0.3s;
+  }
+  .you {
+    display: flex;
+    /*   justify-content:flex-end; */
+    text-align: left;
+  }
+  .b {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .bubble-you {
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    background-color: #eeeee4;
+    margin-left: 20px;
+  }
+  .bubble {
+    margin-top: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    background-color: white;
+  }
+  .action-box {
+    display: none;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .send-btn {
+    height: 56px;
+    width: 20%;
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  .input-text {
+    max-width: 80%;
+    min-width: 80%;
+    max-height: 50px;
+    min-height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+  }
