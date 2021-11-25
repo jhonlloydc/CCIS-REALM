@@ -6,80 +6,23 @@
     </head>
     <title>CCIS</title>
     <body>
-        <div class="side-box">
-            <div class="action-box">
-                <div id='chat'>
-                    <div class="online"></div>Chat</div>
-                <div class="close">X</div>
-            </div>
-            
-            <div class="chat-content">
-                <div class="chats">
-                    <div class="p-chat">
-                        <label class="sender">Jhon Lloyd</label>
-                        <p class="m-message">This is my message</p>
-                    </div>
-
-                    <div class="p-chat">
-                        <label class="sender">Jhon Lloyd</label>
-                        <p class="m-message">This is my message</p>
-                    </div>
-
-                    <div class="p-chat">
-                        <label class="sender">Jhon Lloyd</label>
-                        <p class="m-message">This is my message lkashdflkashdfkladhfklahsdl flashdlfh lashdflkh sdfklashdlkf klasdflk hklsdhflk halksdjflh slkdfl lksdhf</p>
-                    </div>
-                </div>
-                <div class="message-box">
-                    <textarea class="input-msg" placeholder="Send Message"></textarea>
-                    <button>Send</button>
-                </div>
-            </div>
-            
-        </div>
-        
         <h1 class="page-header"></h1>
         <div class="nav-bar">
             <button id="menu-1">Menu 1</button>
             <button id="menu-2">Menu 2</button>
-            <button id='menu-3'>Menu 1</button>
-            <button id='menu-4' style="margin-right: 30px;">Menu 1</button>
+            <button>Menu 1</button>
+            <button>Menu 1</button>
         </div>
         <div class="main-content">
             <iframe id='content' src="page1.html" frameborder="0"></iframe>
-            
         </div>
         
     </body>
     <script src="js/config.js"></script>
     <script>
-
-        // ON LOAD
-        $('#menu-1').css({ "border-bottom": "solid 2px","border-color": "black", "background-color":"#0057FF","color":"white"});
-
-
-
-
-
-        $('#chat').click(function(){
-            $('.side-box').css({"height":"500px","display":"block"});
-            $('.chat-content').css({"display":"flex"});
-        });
-        $('.close').click(function(){
-            $('.chat-content').css({"display":"none"});
-            $('.side-box').css({"height":"50px"});
-            
-        });
-
-
-
-        $('button').click(function(){
-            $('button').css({ "border-bottom": "none","border-color": "none", "background-color":"#E7E7E7","color":"white"});
-            $(this).css({ "border-bottom": "solid 2px","border-color": "black", "background-color":"#0057FF","color":"white"});
-        });
         $('.page-header').html(pageheader);
         $('#menu-1').click(function(){
-           
+            alert('Menu 1 is clicked');
 
             $('.main-content').html('');
             $('.main-content').append(
@@ -87,7 +30,7 @@
             );
         });
         $('#menu-2').click(function(){
-            
+            alert('Menu 2 is clicked');
 
             $('.main-content').html('');
             $('.main-content').append(
