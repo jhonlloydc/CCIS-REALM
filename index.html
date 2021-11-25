@@ -6,28 +6,33 @@
     </head>
     <title>CCIS</title>
     <body>
-        <div class="modal">
-            <div class="form">
-                <h1>Nickname</h1>
-                <input id='alias' class="des" type="text" name="">
-                <button id='set-alias' class="des" style="margin-top:10px;width: 88%;">DONE</button>
-            </div>
-        </div>
         <div class="side-box">
             <div class="action-box">
                 <div id='chat'>
                     <div class="online"></div>Chat</div>
-
                 <div class="close">X</div>
             </div>
             
             <div class="chat-content">
                 <div class="chats">
-                    
+                    <div class="p-chat">
+                        <label class="sender">Jhon Lloyd</label>
+                        <p class="m-message">This is my message</p>
+                    </div>
+
+                    <div class="p-chat">
+                        <label class="sender">Jhon Lloyd</label>
+                        <p class="m-message">This is my message</p>
+                    </div>
+
+                    <div class="p-chat">
+                        <label class="sender">Jhon Lloyd</label>
+                        <p class="m-message">This is my message lkashdflkashdfkladhfklahsdl flashdlfh lashdflkh sdfklashdlkf klasdflk hklsdhflk halksdjflh slkdfl lksdhf</p>
+                    </div>
                 </div>
                 <div class="message-box">
-                    <textarea maxlength='45' class="input-msg" placeholder="Send Message"></textarea>
-                    <button id='send'>Send</button>
+                    <textarea class="input-msg" placeholder="Send Message"></textarea>
+                    <button>Send</button>
                 </div>
             </div>
             
@@ -49,78 +54,11 @@
     <script src="js/config.js"></script>
     <script>
 
-        $('#set-alias').click(function(){
-
-            var seta = $('#alias').val();
-            if(seta.trim() == ''){
-                alert('Enter Nickname');
-            }
-            else{
-                $('.modal').hide();
-            }
-            
-        });
-
-
         // ON LOAD
-        let currentDate = new Date();
-        let cDay = currentDate.getDate();
-        let cMonth = currentDate.getMonth() + 1;
-        let cYear = currentDate.getFullYear();
-        let date = "<b>" + cDay + "/" + cMonth + "/" + cYear + "</b>";
         $('#menu-1').css({ "border-bottom": "solid 2px","border-color": "black", "background-color":"#0057FF","color":"white"});
 
-        $('#send').click(function(){
-
-            var name = $('#alias').val();
-            var message = $('.input-msg').val();
-            
-            $.post("https://pasuyo.store/ccis/ccis-add-message?name="+name+"&message="+message+"&date="+date+"");
-
-            $('.input-msg').val('');
-        });
 
 
-        $.getJSON(
-                "https://pasuyo.store/ccis/ccis-chat-api",function(data){
-                    $('.chats').html('');
-                    $.each(data,function(key,value){
-
-
-                        $('.chats').append(
-
-                            "<div class='p-chat'>"+
-                                "<label class='sender'>"+value.name+"</label>"+
-                                "<div class='m-message'>"+value.message+"</div>"+
-                            "</div>"
-                        );
-
-
-                    });
-                });
-
-        setInterval(() => {
-
-            $.getJSON(
-                "https://pasuyo.store/ccis/ccis-chat-api",function(data){
-                    $('.chats').html('');
-                    $.each(data,function(key,value){
-
-
-                        $('.chats').append(
-
-                            "<div class='p-chat'>"+
-                                "<label class='sender'>"+value.name+"</label>"+
-                                "<p class='m-message'>"+value.message+"</p>"+
-                                "<label class='date'>"+value.date+"</label>"+
-                            "</div>"
-                        );
-
-
-                    });
-                });
-
-        }, 500);
 
 
         $('#chat').click(function(){
