@@ -77,15 +77,15 @@ $('.send-btn').click(()=>{
   var url = "https://pasuyo.store/ccis/ccis-add-message?name="+name+"&message="+message+"&date="+date+"";
   $.post(url);
   
-  $('.chat-box').prepend(
+//   $('.chat-box').prepend(
     
-    "<div class='bubble-you'>"+
-        "<h3 class='you'>"+name+"</h3>"+
-        "<p class='you'>"+message+"</p>"+
-      "</div>"+
-    "</div>"
+//     "<div class='bubble-you'>"+
+//         "<h3 class='you'>"+name+"</h3>"+
+//         "<p class='you'>"+message+"</p>"+
+//       "</div>"+
+//     "</div>"
   
-  );
+//   );
   $('.input-text').val('');
  
   
