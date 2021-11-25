@@ -1,9 +1,9 @@
 // Header TITLE PAGE
 
-var pageheader = "Welcome to CCIS Page";
+var pageheader = "Welcome to Student Council CCIS Page";
 
 // Set Page Titles
-var page1 = "Page one";
+var page1 = "Day 1 (Jan. 3, 2022)";
 var page2 = "Page two";
 var page3 = "Page three";
 var page4 = "Page four";
